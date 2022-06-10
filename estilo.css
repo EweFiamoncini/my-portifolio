@@ -9,3 +9,31 @@
 footer p a {
 	margin: 5px;
 }
+
+#animated-title{
+  margin:0px;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+#animated-title:first-of-type {
+  animation: showup 5s alternate;
+}
+
+#animated-title:last-of-type {
+  width:0px;
+  animation: reveal 5s forwards;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+		50% {opacity: 1;}
+    100% {opacity:1;}
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+		25% {opacity: 1; width: 0;}
+		50% {opacity: 1;width: 130px;}
+    100% {opacity: 1;width: 300px;}
+}
