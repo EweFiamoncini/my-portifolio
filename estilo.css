@@ -7,6 +7,23 @@
 	padding-top: 60px;
 }
 
+#loading{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  transform: scale(4);
+}
+
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #ffff;
+  border-radius: 50%;
+  border-top-color: #727272;
+  height: 50px;
+  width: 50px;
+}
+
 footer p a {
 	margin: 5px;
 }
@@ -26,6 +43,12 @@ footer p a {
   animation: reveal 5s forwards;
 }
 
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @keyframes showup {
     0% {opacity:0;}
 		50% {opacity: 1;}
@@ -38,3 +61,5 @@ footer p a {
 		50% {opacity: 1;width: 130px;}
     100% {opacity: 1;width: 300px;}
 }
+
+
